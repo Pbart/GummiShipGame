@@ -1,0 +1,77 @@
+
+Starship: Bandit Design Document and MDA Document
+
+Overview:
+
+Starship: Bandit is a 3D galaga game that will incorporate mechanics from Square Enix's Kingdom Hearts 2 Gummi Ship Missions.
+Paul Bartlett and James Tuxbury (along with any outside help) are making this for portfolio purposes and possibly sell this on
+the Google Play Store, Steam, and other devices.
+
+Starship: Bandit will put player's in the position of a bandit who targets and eliminates enemies to take their starship's components
+and use them to upgrade their current ships or build new, more powerful and versitile ships (PC version only). 
+
+Starship: Bandit will allow players to:
+
+- Allow players to choose from a selection of premade ships that each have their advantages and disadvantages   
+- Build and create their own ships from the parts that the player collects from fallen enemies (PC only)
+- Fight enemies in various locations in space, on a planet's surface or over a massive city
+- Fight bosses that will require players to figure out the bosses patterns and expose the boss's weaknesses
+- Fight bosses one after another to get more rare components to add to thier collection
+
+The Garage/Hangar:
+The Garage/Hangar is where the player will be able to select or build their own ships. Ship selection will be like of Star Wars Rouge Squardon where
+the premade and created ships will be in the hangar and the player will swipe left or right/push left or right arrow/push left analog stick left or right 
+to move to the next/previous ship in the hangar. To select the ship, players will tap the ship/press enter/press A/X to use that ship on their mission. To 
+create their ship, players will go to an empty spot in the hangar and select it to be taken to the ship creation menu.
+
+Ships:
+Players will be given a select few ships to start of with. As the player progresses through the game, they will unlock more ships that have
+their advantages and disadvantages compared to the other ships the player has at their disposal. Player's will also be able to create thier own ships
+with the components they collect from defeated enemies. There will be various components that go into making a ship that the player will have to collect
+but the player will start out with a few components already in thier garage.
+
+Ship Components:
+There will be various components that enemies and bosses will drop that the player can use to make their ships with. The various components are cockpits, engines,
+wings, weapons, and hull components. There will be a limit on how many components the player can use to make their ships but the limit will increase as they progress 
+through the game. Their will be different types of ship componets that each have their strenghts and drawbacks.
+
+	Weapons:
+	Weapons are a part of a ships component. Weapons are used to damage and destroy enemies that the player will face. There will be three different weapons that each have 
+	their own upgrades. The weapons will not convert to the next level but there are better weapons of the same type
+
+	Weapon 1: Fire (Name will change)
+
+	The Fire weapon type is a single direction, rapid fire projectile weapon. There are 3 types of Fire weapon. Fire, Fira and Firaga. The difference 
+	between these is the damage and rate of fire will increase with Fire having the slowest rate of fire and lowest damage output and Firaga having
+	the fastest rate of fire and highest damage output.
+
+	Weapon 2: Blizzard (Name will Change)
+
+	The Blizzard weapon type is a multi-directional, rapid fire projectile weapon. There are 3 types of Blizzard weapons, Blizzard, Blizzara and Blizzaga.
+	The difference between these is the number of directions projectile are fired in, damage and rate of fire. Blizzard will have bi-directional firing pattern and lowest damage output,
+	Blizzara having a tri-directional firing pattern and having higher damage than Blizzard. Blizzaga having a quad-directional firing pattern and having the highest damage output.  
+	Blizzard type weapons will never shoot directly in front of the screen. Blizzard type weapons deal higher damage than Fire type weapons. 
+
+	Weapon 3: Gravity (Name will change)
+
+	The gravity weapon type is a single direction, rapid fire projectile weapon. Compared to the Fire type and Blizzard type weapons, this weapon type has the highest damage output, 
+	slowest rate of fire and explode on contact with enemies dealing AOE damage. There are 3 types of Gravity weapons, Gravity, Gravira, and Graviga. The difference between the three
+	type of Gravity weapons is the damage and explosion radius. Rate of fire will not change between the thre types of Gravity weapons.
+
+	There will be more weapons added to the list as the game further's into development.
+	
+	Wings:
+	Wings are what allows the player to move and manuver faster. A ship with no wings will move much slower than a ship that does have wings
+	
+	Cockpits:
+	Cockpits are ship components that give the player's ship a boost in damage and in health. A cockpit is required to make a ship. If a ship has not cockpit, then it cannot be used
+	in missions.
+	
+	Hulls:
+	Hulls are ship components that give the ship health. The more hulls the ship has, the more health it will have.
+	
+	Engines:
+	Engines are ship components that give the ship a boost in power and in the PC version, move the player faster through the level. A ship must have one engine in order to be used
+	on missions.
+	
+

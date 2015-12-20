@@ -1,0 +1,27 @@
+Weapons
+
+Weapons are a part of a ships component. There can be only a maximum number of ship components based on the componentTotalCost.
+
+There will be three different weapons that each have their own upgrades. THe weapons will not convert to the next level but there are better
+weapons of the same type
+
+Weapon 1: Fire (Name will change)
+
+The Fire weapon type is a single direction, rapid fire projectile weapon. There are 3 types of Fire weapon. Fire, Fira and Firaga. The difference 
+between these is the damage and rate of fire will increase with Fire having the slowest rate of fire and lowest damage output and Firaga having
+the fastest rate of fire and highest damage output.
+
+Weapon 2: Blizzard (Name will Change)
+
+The Blizzard weapon type is a multi-directional, rapid fire projectile weapon. There are 3 types of Blizzard weapons, Blizzard, Blizzara and Blizzaga.
+The difference between these is the number of directions projectile are fired in, damage and rate of fire. Blizzard will have bi-directional firing pattern and lowest damage output,
+Blizzara having a tri-directional firing pattern and having higher damage than Blizzard. Blizzaga having a quad-directional firing pattern and having the highest damage output.  
+Blizzard type weapons will never shoot directly in front of the screen. Blizzard type weapons deal higher damage than Fire type weapons. 
+
+Weapon 3: Gravity (Name will change)
+
+The gravity weapon type is a single direction, rapid fire projectile weapon. Compared to the Fire type and Blizzard type weapons, this weapon type has the highest damage output, 
+slowest rate of fire and explode on contact with enemies dealing AOE damage. There are 3 types of Gravity weapons, Gravity, Gravira, and Graviga. The difference between the three
+type of Gravity weapons is the damage and explosion radius. Rate of fire will not change between the thre types of Gravity weapons.  
+
+ 
