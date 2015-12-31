@@ -87,20 +87,19 @@ public class SaberToothSpawner : ISpawner
 
 		if(spawnPathScript)
 		{
-			enemy = (GameObject)Instantiate(saberToothPrefab, spawnPathScript.b_spline.transform.position, Quaternion.identity);
-
-//			enemy.transform.position = spawnPath.transform.position;
+			enemy = (GameObject)Instantiate(saberToothPrefab, spawnPathScript.b_spline.GetControlPoint(0), Quaternion.identity);
 
 			//set the enemy's bezierSpline to the spawnPaths
 			BezierSplineFollower enemyFollowScript = enemy.GetComponent<BezierSplineFollower>();
 
 			if (enemyFollowScript)
 			{
-				//TODO: create a copy constructore and assignment operator overlead so this is cleaner.
+				//TODO: create a copy constructore and assignment operator so this is cleaner.
 				enemyFollowScript.b_spline = spawnPathScript.b_spline;
 				enemyFollowScript.duration = spawnPathScript.duration;
 				enemyFollowScript.lookForward = spawnPathScript.lookForward;
 				enemyFollowScript.mode = spawnPathScript.mode;
+
 			}
 		}
 		else

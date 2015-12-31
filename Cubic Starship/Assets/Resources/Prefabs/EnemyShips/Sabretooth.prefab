@@ -634,11 +634,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 166740, guid: 8ea85fddedb63874b8bc4c732d1e1c64, type: 2}
-  fireRate: 2
   mainCamera: {fileID: 0}
   killableObject: {fileID: 0}
   enemySpawner: {fileID: 11497014, guid: 06b5e71fdeea8ee46bda8251085da8af, type: 2}
   respawnRate: 0
+  spawn: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

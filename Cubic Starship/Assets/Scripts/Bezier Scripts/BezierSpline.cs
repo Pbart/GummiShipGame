@@ -58,7 +58,7 @@ public static class Bezier
     }
 }
 
-public class BezierSpline : MonoBehaviour
+public class BezierSpline : Path
 {
     
     public bool showDirections;
