@@ -20,7 +20,7 @@ public class EnemyWeapon : MonoBehaviour
 	private float m_TimeElapsed;			//time elapsed once this starts shooting
 	private int m_BulletsFired;				//number of bullets fired so far (once it starts shooting)
 	private WeaponState m_State;
-
+	private Transform m_PlayerSpaceTransform;
 
 	// fires the numberOfProjectiles at the fireRate frequency
 	public void Shoot()
@@ -37,6 +37,18 @@ public class EnemyWeapon : MonoBehaviour
 	void Awake () 
 	{
 		ResetWeapon();
+
+		GameObject o = GameObject.FindGameObjectWithTag("PlayerSpace");
+
+
+		if(o != null)
+		{
+			m_PlayerSpaceTransform = o.transform;
+		}
+		else
+		{
+			print ("Warning in EnemyWeapon Awake(): Can not find PlayerSpace.");
+		}
 
 	}
 
@@ -93,7 +105,9 @@ public class EnemyWeapon : MonoBehaviour
 	{
 		if(projectile)
 		{
-			Instantiate(projectile, this.transform.position, this.transform.rotation);
+			EnemyProjectile o = (EnemyProjectile)Instantiate(projectile, this.transform.position, this.transform.rotation);
+		//	if(playerSpace && m_PlayerSpaceTransform)
+				o.transform.SetParent(m_PlayerSpaceTransform);
 			m_BulletsFired++;
 		}
 	}
