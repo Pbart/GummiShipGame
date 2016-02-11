@@ -1,0 +1,232 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &169806
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 448910}
+  - 114: {fileID: 11458124}
+  - 114: {fileID: 11437394}
+  - 114: {fileID: 11419026}
+  m_Layer: 0
+  m_Name: Spawner-SlowPathing
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &448910
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 169806}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &11419026
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 169806}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e05088a77836e1244aed79f761330258, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mode: 0
+  b_spline: {fileID: 11437394}
+  duration: 10
+  lookForward: 0
+--- !u!114 &11437394
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 169806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83b97359c08528f4cbaba8ee625d6ed4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showDirections: 0
+  points:
+  - {x: -27.0289917, y: 3.39163017, z: 19.2777748}
+  - {x: -15.3567142, y: 3.39163017, z: 20.5429802}
+  - {x: -9.61683941, y: 2.54641032, z: 20.154974}
+  - {x: -.401634693, y: 2.6483438, z: 20.4259892}
+  - {x: 9.46216869, y: 2.6483438, z: 19.520998}
+  - {x: -7.80123663, y: -3.18452907, z: 20.3419189}
+  - {x: -.327413082, y: -3.18452907, z: 20.2884789}
+  - {x: 6.26495266, y: -3.18452907, z: 19.68787}
+  - {x: 20.5293541, y: -.958047867, z: 19.585722}
+  - {x: 28.6856384, y: -3.82538462, z: 19.608139}
+  isLooped: 0
+  modes: 00000000000000000000000000000000
+--- !u!114 &11458124
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 169806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f8b52787ac334949837f96b82f01a58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pathingEnemyPrefab: {fileID: 174354, guid: dd11d62ac26ad154983ba59b156240b0, type: 2}
+  spawnPathScript: {fileID: 11419026}
+  spawnAmount: 10
+  spawnRate: .800000012
+  spawnParent: {fileID: 0}
+  forceSpawn: 0
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: points.Array.data[0].x
+      value: -27.0289917
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: points.Array.data[0].y
+      value: 3.39163017
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: points.Array.data[0].z
+      value: 19.2777748
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: points.Array.data[1].x
+      value: -15.3567142
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: points.Array.data[1].y
+      value: 3.39163017
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: points.Array.data[1].z
+      value: 20.5429802
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: points.Array.data[2].x
+      value: -9.61683941
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: points.Array.data[2].y
+      value: 2.54641032
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: points.Array.data[2].z
+      value: 20.154974
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: points.Array.data[3].x
+      value: -.401634693
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: points.Array.data[3].y
+      value: 2.6483438
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: points.Array.data[3].z
+      value: 20.4259892
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: points.Array.data[4].x
+      value: 9.46216869
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: points.Array.data[4].y
+      value: 2.6483438
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: points.Array.data[4].z
+      value: 19.520998
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: points.Array.data[5].x
+      value: -7.80123663
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: points.Array.data[5].y
+      value: -3.18452907
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: points.Array.data[5].z
+      value: 20.3419189
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: points.Array.data[6].x
+      value: -.327413082
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: points.Array.data[6].y
+      value: -3.18452907
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: points.Array.data[6].z
+      value: 20.2884789
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: points.Array.data[7].x
+      value: 6.26495266
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: points.Array.data[7].y
+      value: -3.18452907
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: points.Array.data[7].z
+      value: 19.68787
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: points.Array.data[8].x
+      value: 20.5293541
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: points.Array.data[8].y
+      value: -.958047867
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: points.Array.data[8].z
+      value: 19.585722
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: points.Array.data[9].x
+      value: 28.6856384
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: points.Array.data[9].y
+      value: -3.82538462
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: points.Array.data[9].z
+      value: 19.608139
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: spawnRate
+      value: .800000012
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: duration
+      value: 10
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 169806}
+  m_IsPrefabParent: 1

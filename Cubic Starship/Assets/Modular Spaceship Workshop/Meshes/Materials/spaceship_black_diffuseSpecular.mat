@@ -40,7 +40,7 @@ Material:
       data:
         first:
           name: _Shininess
-        second: .371487588
+        second: .135000005
       data:
         first:
           name: _EmissionLM
@@ -48,7 +48,7 @@ Material:
       data:
         first:
           name: _RimPower
-        second: 6.0970149
+        second: 8
     m_Colors:
       data:
         first:
@@ -61,4 +61,4 @@ Material:
       data:
         first:
           name: _RimColor
-        second: {r: .940298498, g: 0, b: 0, a: 0}
+        second: {r: 1, g: 0, b: 0, a: 0}

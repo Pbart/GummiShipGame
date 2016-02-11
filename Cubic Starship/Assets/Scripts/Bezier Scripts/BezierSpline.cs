@@ -111,7 +111,7 @@ public class BezierSpline : Path
     }
 
     //for the Cubic Curve
-    public Vector3 GetPoint(float t)
+	override public Vector3 GetPoint(float t)
     {
         int i;
         if (t >= 1f)
@@ -130,7 +130,7 @@ public class BezierSpline : Path
     }
 
     //for the Cubic Curve
-    public Vector3 GetVelocity(float t)
+    override public Vector3 GetVelocity(float t)
     {
         int i;
         if (t >= 1f)
@@ -148,7 +148,7 @@ public class BezierSpline : Path
         return transform.TransformPoint(Bezier.GetFirstDerivative(points[i], points[i + 1], points[i + 2], points[i + 3], t)) - transform.position;
     }
 
-    public Vector3 GetDirection(float t)
+	override public Vector3 GetDirection(float t)
     {
         return GetVelocity(t).normalized;
     }
