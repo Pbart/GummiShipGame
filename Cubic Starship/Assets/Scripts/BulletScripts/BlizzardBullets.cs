@@ -5,7 +5,6 @@ public class BlizzardBullets : MonoBehaviour
 {
     public float projectileLifetime;
 
-    private Vector3 viewportPos;
     private Vector3 directionVector;
     private GameObject playerBullet;
 
@@ -28,10 +27,6 @@ public class BlizzardBullets : MonoBehaviour
     void BulletMovement()
     {
         this.transform.position += DirectionVector;
-
-        //viewportPos = Camera.main.WorldToScreenPoint(this.transform.position);
-        //viewportPos += new Vector3(0f,0f,1f);
-        //this.transform.position = Camera.main.ScreenToWorldPoint(viewportPos);
     }
 
     void DestroySelf()

@@ -24,11 +24,6 @@ public class PlayerControls : KillableObject
         mainCamera = Camera.main;
         weapons = this.GetComponentsInChildren<SingleDirectionalCannon>();
         anim = gameObject.GetComponent<Animator>();
-
-        for (int i = 0; i < weapons.Length; i++)
-        {
-            Debug.Log("Name of Weapon: " + weapons[i].gameObject.name + " Script Name: " + weapons[i].GetComponentInChildren<SingleDirectionalCannon>());
-        }
     }
 
     // Update is called once per frame
@@ -38,8 +33,6 @@ public class PlayerControls : KillableObject
         KeepPlayerInBounds();
         FireWeapons();
         DoDefensiveAction();
-
-        //Debug.Log(Input.GetAxis("ShipHorizontalMovement"));
     }
  
     /// <summary>
