@@ -1,0 +1,100 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &163126
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 461134}
+  - 114: {fileID: 11458368}
+  - 114: {fileID: 11480650}
+  - 114: {fileID: 11452640}
+  m_Layer: 0
+  m_Name: Spawner-FastPathing
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &461134
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 163126}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &11452640
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 163126}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e05088a77836e1244aed79f761330258, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mode: 0
+  b_spline: {fileID: 11480650}
+  duration: 5.9000001
+  lookForward: 0
+--- !u!114 &11458368
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 163126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f8b52787ac334949837f96b82f01a58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pathingEnemyPrefab: {fileID: 125100, guid: ff92d941e45a16144bcdcc3e54aef962, type: 2}
+  spawnPathScript: {fileID: 11452640}
+  spawnAmount: 2
+  spawnRate: 1
+  spawnParent: {fileID: 0}
+  forceSpawn: 0
+--- !u!114 &11480650
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 163126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83b97359c08528f4cbaba8ee625d6ed4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showDirections: 0
+  points:
+  - {x: -5.74873543, y: .596158981, z: -.372215271}
+  - {x: -5.85491991, y: .596158981, z: 14.9536896}
+  - {x: -5.83717966, y: 0, z: 27.2207146}
+  - {x: -5.51141548, y: 0, z: 34.2610703}
+  - {x: -5.1105442, y: 0, z: 46.8067703}
+  - {x: 5.24380827, y: -1.23855734, z: 44.6196327}
+  - {x: 5.33534861, y: -1.23855734, z: 36.1242142}
+  - {x: 5.50367403, y: -1.23855734, z: 23.1476612}
+  - {x: 5.30886221, y: -1.2349596, z: 13.7067547}
+  - {x: 5.26800966, y: -.331676483, z: -.398645401}
+  isLooped: 0
+  modes: 00000000000000000000000000000000
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 163126}
+  m_IsPrefabParent: 1
