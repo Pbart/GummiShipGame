@@ -5,7 +5,6 @@ public class PlayerBullet : MonoBehaviour
 {
     public float projectileLifetime;
 
-    private Vector3 viewportPos;
     private Vector3 directionVector;
     private GameObject playerBullet;
 
@@ -22,19 +21,12 @@ public class PlayerBullet : MonoBehaviour
         DestroySelf();
     }
 
-    /// <summary>
-    /// used to covert the bullets position into viewport space, move it forward, then convert it back to world space
-    /// </summary>
-    void BulletMovement()
+    public virtual void BulletMovement()
     {
-        //viewportPos = Camera.main.WorldToViewportPoint(this.transform.position);
-        //viewportPos += directionVector;
-        //this.transform.position = Camera.main.ViewportToWorldPoint(viewportPos);
-
         this.transform.position += DirectionVector;
     }
 
-    void DestroySelf()
+    public virtual void DestroySelf()
     {
         Destroy(playerBullet, projectileLifetime);
     }

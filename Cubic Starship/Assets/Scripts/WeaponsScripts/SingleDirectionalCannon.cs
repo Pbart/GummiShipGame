@@ -3,8 +3,12 @@ using System.Collections;
 
 public class SingleDirectionalCannon : MonoBehaviour {
 
+    public enum WeaponTier { Tier1, Tier2, Tier3 }
+
     public float fireRate; //how fast the weapon should fire
     public float projectileSpeed = 1f; //how fast the projectile spawn should move
+
+    public WeaponTier Tier;
 
     public GameObject projectile; //what projectile to spawn when shooting
 
@@ -15,10 +19,14 @@ public class SingleDirectionalCannon : MonoBehaviour {
 
     private GameObject projectileClone; //the projectile we will be shooting
 
+    
+
     // Use this for initialization
     void Start()
     {
+        //Debug.Log(this.projectile.name);
         hiddenFireRate = fireRate;
+        //Debug.Log(projectileClone.name);
     }
 
     // Update is called once per frame
@@ -46,6 +54,28 @@ public class SingleDirectionalCannon : MonoBehaviour {
         projectileClone = (GameObject)Instantiate(projectile, transform.position + new Vector3(0f, -0.5f, 0), transform.rotation);
         projectileClone.transform.SetParent(Camera.main.transform);
         projectileClone.GetComponent<PlayerBullet>().DirectionVector = directionVector;
+
+        //if (this.projectile.name == "Player Bullet")
+        //{
+        //    Debug.Log("We are here1");
+        //    projectileClone.GetComponent<PlayerBullet>().DirectionVector = directionVector;
+        //}
+        if (this.projectile.name == "AOE Bullet")
+        {
+            if (Tier == WeaponTier.Tier1)
+            {
+                projectileClone.GetComponent<AOEBullet>().ExplosionRadius = 7f;
+            }
+            else if (Tier == WeaponTier.Tier2)
+            {
+                projectileClone.GetComponent<AOEBullet>().ExplosionRadius = 10.5f;
+            }
+            else
+            {
+                projectileClone.GetComponent<AOEBullet>().ExplosionRadius = 14f;
+            }
+        }
+        
     }
 
     /// <summary>

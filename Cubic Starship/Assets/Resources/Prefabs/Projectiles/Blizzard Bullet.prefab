@@ -12,7 +12,7 @@ GameObject:
   - 135: {fileID: 13582110}
   - 23: {fileID: 2358648}
   - 114: {fileID: 11446354}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Blizzard Bullet
   m_TagString: Projectile
   m_Icon: {fileID: 0}
@@ -73,7 +73,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 269fc4b2092e9da4b9dfef2515aa1576, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectileSpeed: .5
   projectileLifetime: 2
 --- !u!135 &13582110
 SphereCollider:
@@ -113,6 +112,14 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_UseGravity
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

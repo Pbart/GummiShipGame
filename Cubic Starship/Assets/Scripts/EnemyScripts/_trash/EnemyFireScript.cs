@@ -9,6 +9,7 @@ public class EnemyFireScript : KillableObject
     private GameObject obj;
     managerScript ms;
     public bool spawn = false;
+    public bool isOnScreen;
     void Start()
     {
         
@@ -22,11 +23,16 @@ public class EnemyFireScript : KillableObject
     {
         viewportPos = Camera.main.WorldToViewportPoint(this.transform.position);
         if (viewportPos.x > 0 && viewportPos.y > 0 && viewportPos.x <= 1 && viewportPos.y <= 1)
-        {            
-            if(projectile != null)
+        {
+            isOnScreen = true;
+            if (projectile != null)
             {
                 //FireWeapons();
             }
+        }
+        else
+        {
+            isOnScreen = false;
         }
         FindPlayer();
     }
@@ -46,9 +52,7 @@ public class EnemyFireScript : KillableObject
     {
         if (other.tag == "Projectile")
         {
-            Debug.Log(gameObject.name + "'s spawner is " + enemySpawner.name);
-            enemySpawner.spawn = true;
-            ms.updateScore();
+            Debug.Log("Entered Projectile Trigger");
             Destroy(other.gameObject);
             Destroy(this.gameObject);
             yield return null;
