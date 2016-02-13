@@ -57,10 +57,16 @@ public class BezierSplineFollower : MonoBehaviour
         }
 
         Vector3 position = b_spline.GetPoint(progress);
-        transform.localPosition = position;
+//        transform.localPosition = position;	//Eric 12/3/15 changed from localPosition to position, so it can follow whoever the parent is
+		transform.position = position;
         if (lookForward)
         {
             transform.LookAt(position + b_spline.GetDirection(progress));
         }
     }
+
+	public bool IsFinished()
+	{
+		return (progress >= 1f) ? (true) : (false);
+	}
 }

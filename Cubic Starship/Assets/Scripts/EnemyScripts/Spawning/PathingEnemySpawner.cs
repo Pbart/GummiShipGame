@@ -5,9 +5,9 @@ using System.Collections;
 
 //SaberToothSpawner is for spawning sabertooths and making them follow a path (bezier spline). The amount of enemies and time in between
 // each enemy is controlled in the inspector.
-public class SaberToothSpawner : ISpawner
+public class PathingEnemySpawner : ISpawner
 {
-	public GameObject saberToothPrefab;				//The saber tooth prefab to spawn
+	public GameObject pathingEnemyPrefab;				//The saber tooth prefab to spawn
 	public BezierSplineFollower spawnPathScript;  	//The path each enemy will follow when spawned. They are spawned at the beginning of the path.
 											// 10-21-15 - Eric - For right now, they will only follow a BezierSpline script. If there is no 
 											// BezierSpline script, the enemy will spawn at the parent's transform's origin only and sit there.
@@ -87,25 +87,23 @@ public class SaberToothSpawner : ISpawner
 
 		if(spawnPathScript)
 		{
-			enemy = (GameObject)Instantiate(saberToothPrefab, spawnPathScript.b_spline.transform.position, Quaternion.identity);
-
-//			enemy.transform.position = spawnPath.transform.position;
+			enemy = (GameObject)Instantiate(pathingEnemyPrefab, spawnPathScript.b_spline.GetControlPoint(0), Quaternion.identity);
 
 			//set the enemy's bezierSpline to the spawnPaths
 			BezierSplineFollower enemyFollowScript = enemy.GetComponent<BezierSplineFollower>();
 
 			if (enemyFollowScript)
 			{
-				//TODO: create a copy constructore and assignment operator overlead so this is cleaner.
+				//TODO: create a copy constructore and assignment operator so this is cleaner.
 				enemyFollowScript.b_spline = spawnPathScript.b_spline;
 				enemyFollowScript.duration = spawnPathScript.duration;
-				enemyFollowScript.lookForward = spawnPathScript.lookForward;
 				enemyFollowScript.mode = spawnPathScript.mode;
+
 			}
 		}
 		else
 		{
-			enemy = (GameObject)Instantiate(saberToothPrefab, new Vector3(0, 0, 0), Quaternion.identity);
+			enemy = (GameObject)Instantiate(pathingEnemyPrefab, new Vector3(0, 0, 0), Quaternion.identity);
 		}
 
 		if (spawnParent)

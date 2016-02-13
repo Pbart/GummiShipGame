@@ -2,17 +2,17 @@
 using System.Collections;
 
 //simply triggers the enemy waves specified when the trigger is entered
-public class TriggetEnemyWaveScript : MonoBehaviour {
+public class SpawnWaveTrigger : MonoBehaviour {
 
-	public EnemySpawnWave[] enemyWaves;
+	public EnemySpawnWave[] enemySpawnWaves;
 
 	void OnTriggerEnter(Collider other)
 	{
 		if (other.tag == "Player") 
 		{
-			for(int i = 0; i < enemyWaves.Length; i++)
+			for(int i = 0; i < enemySpawnWaves.Length; i++)
 			{
-				enemyWaves[i].TriggerWave();
+				enemySpawnWaves[i].TriggerWave();
 			}
 		}
 	}
